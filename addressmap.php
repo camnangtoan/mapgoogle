@@ -31,7 +31,7 @@
             }
             return  false;
         }
-
+        //thuc hien lay toa do luc ban dau
         loadmap();
 
         var map;
@@ -54,6 +54,7 @@
                             document.getElementById("map_canvas"),
                             myOptions
                         );
+            //hien thi ra dia chi luc ban dau
             placeMarker(myOptions.center);
             google.maps.event.addListener(map, 'click', function(event) {
                 placeMarker(event.latLng);
