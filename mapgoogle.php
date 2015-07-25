@@ -30,7 +30,23 @@
 
                 return false;
             }
-
+            var loadmap= function (){
+                var success = function (pos){
+                    var lat     = pos.coords.latitude,
+                        long    = pos.coords.longitude,
+                        coords  = lat+ ',' +long;
+                        alert(coords);
+                    
+                };
+                var error = function (){
+                    alert('Geolocation not supported')
+                };
+                if(geoPosition.init()){
+                    geoPosition.getCurrentPosition(success, error);
+                }
+                return  false;
+            }
+            loadmap();
         </script>
     </body>
 </html>
